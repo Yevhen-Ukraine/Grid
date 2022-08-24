@@ -127,9 +127,23 @@
     grid-template-areas: 
     "header header message"
     "blog blog message"
-    "footer footer ."; /* Точка позволяет оставить незаполненную область после блока footer */
+    /* "footer footer ."; Точка позволяет оставить незаполненную область после блока footer */
+    "footer footer footer"
 
 }
+
+@media (max-width: 768px) {
+    .grid-container_7 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, minmax(100px, auto));
+        grid-template-areas:
+        "header header"
+        "blog blog"
+        "message message"
+        "footer footer"
+    }
+}
+
 #header {
     grid-area: header;
 }
